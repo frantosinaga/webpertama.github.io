@@ -1,0 +1,253 @@
+*,
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-primary: rgb(5, 105, 5);
+    --bg-secondary: rgb(145, 233, 4);
+    --text-primary: white;
+    --text-secondary: black;
+    --hover-primary: rgb(255, 2, 2);
+    --hover-secondary: rgb(130, 9, 243);
+    
+}
+
+header {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+.logo-title {
+    margin-left: 10px;
+    transition: .3s ease-in .0s;
+}
+
+.logo:hover {
+    color: var(--hover-primary);
+    cursor: pointer;
+    transform: rotate(1deg) ;
+}
+
+nav ul {
+    display: flex;
+    padding: 20px
+}
+
+li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+li a {
+    transition: .3s ease;
+    display: inline-block;
+}
+
+li a:hover {
+    color: var(--hover-primary);
+    transform: rotate(2deg);
+}
+
+.btn-follow {
+    margin-right: 10px;
+    border: none;
+    font-size: 15px;
+    padding: 4px 8px;
+    border-radius: 10px;
+    background-color: rgb(86, 0, 126);
+    color: white;
+    
+}
+
+.btn-follow:hover {
+    background-color: var(--hover-primary);
+    color: var(--text-primary);
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 100%;
+    padding: 70px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: darkorange
+}
+
+.description {
+    font-size: 2em;
+    font-weight: bolder;
+    gap: 10px;
+    text-transform: capitalize;
+}
+
+.img-foto1 {
+    max-width: 50%;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.paralax {
+    background-image: url(assets/img/Penguins.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.tentang {
+    background-color: var(--bg-primary);
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.btn-kerjasama {
+    margin-top: 20px;
+    border:none;
+    background-color: rgb(8, 116, 26);
+    border-radius: 20px;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-kerjasama:hover {
+    background-color: rgb(124, 108, 3);
+    transition: .3s ease-in-out;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap : 20px;
+    max-height: 400px;
+    width: 100%;
+}
+
+.card-item { 
+    background-color: #f7f7f7;
+    padding: 20px;
+    
+}
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-description {
+    font-size: 20px;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.icon {
+    height: 60px;
+    width: 60px;
+}
+
+footer {
+    background-color: var(--bg-primary);
+    color: #eaeaea;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 600px) and (min-width:200px) {
+    .card {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 20%;
+        margin-bottom: 20%;
+       
+    }
+    .card-item {
+        width: 100%;
+        opacity: .7;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .img-foto1 {
+        max-width: 100%;
+    }
+
+    .intro {
+        margin-top: 10px;
+    }
+
+    .icon{
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .tentang {
+        text-align: justify;
+    }
+    
+    nav {
+       bottom: 0;
+       width: 100%;
+       position: fixed;
+       background-color: var(--bg-primary);
+       z-index: 9;
+    }
+
+    footer{
+        margin-bottom: 20%;
+        margin-top: 5%;
+        
+    }
+}
+
